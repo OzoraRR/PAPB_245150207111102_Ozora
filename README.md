@@ -1,7 +1,3 @@
-# Praktikum 3: State dan Recomposition
-
-Project Android sederhana untuk praktikum PAPB 3. Aplikasi menampilkan counter plus-minus, kotak warna merah/hijau yang berganti saat disentuh, dan profil dengan tombol Follow/Unfollow serta indikator status.
-
 ## Implementasi state
 
 `StateLabApp()` menyimpan `count`, `isRed`, dan `isFollowed` memakai `remember { mutableStateOf(...) }`. Nilainya menjadi sumber kebenaran untuk UI: ketika berubah, Compose melakukan recomposition pada bagian tampilan yang membaca nilai tersebut. Counter membatasi pengurangan dengan `coerceAtLeast(0)`. Kotak warna memilih warna dari `isRed` dan mengubahnya lewat `clickable`.
